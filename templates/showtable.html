@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block title %}Update{% endblock %}
+{% block update%} active{% endblock %}
+{% block content %}
+
+
+
+
+
+
+
+
+<!--Search bar-->
+
+<div class="container search_update" >
+<form class="form-inline"  action="{{ url_for('showtable')}}" method="POST" >
+     <input class="form-control mr-4 border_search" type="search" placeholder="Enter Customer Id(Eg:-01C)" aria-label="Search" name="cus_id">
+     <button class="search-btn" type="submit">Search</button>
+   </form>
+
+</div>
+
+<!--Table-->
+
+
+<div class="update_table">
+<table class="table table-hover  table-bordered">
+  <thead>
+    <tr>
+
+      <th scope="col">Name</th>
+      <th scope="col">House No</th>
+      <th scope="col">Street Id</th>
+       <th scope="col">Contact No</th>
+      <th scope="col">Compost(Kg)</th>
+      <th scope="col">Ecobrick</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+
+      <td>{{datas.Name}}</td>
+      <td>{{datas.House_no}}</td>
+      <td>{{datas.street_id}}</td>
+      <td>{{datas.contact_no}}</td>
+      <td>{{datas.capablecompost}}</td>
+      <td>{{datas.ecobrick}}</td>
+       <td> <a class="delete-btn" onclick="return confirm('Are you sure to delete?');" href="{{url_for ('deletecust', c_id=datas.cus_id)}}">Delete</a></td>
+
+    </tr>
+
+
+  </tbody>
+</table>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Page</title>
+    <meta charset="utf-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <!-My css-->
+     <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='Stylesheet.css')}}">
+  </head>
+  <style>
+  .topnav {
+  overflow: hidden;
+
+}
+
+
+
+.topnav a:hover {
+padding :10px;
+  border-bottom: 3px solid red;
+}
+
+.topnav a.active {
+padding :10px;
+background-color: #66ffc2;
+color:black;
+  border-bottom: 3px solid red;
+}
+      .btn-nav{
+      color:black;
+      background-color:	 #00e673;
+      }
+  </style>
+
+  <body style="background-color: #e6e6e6">
+
+    <nav class="navbar navbar-default  fixed-top fixed-nav-bar">
+ <div class="container-fluid nopadding topnav">
+   <ul class="nav navbar-nav">
+     <li  ><a style="background-color: #ffff33;" href="{{url_for ('index')}}"><h4 class="iconGigo"><b>GIGO</b>  </h4></a></li>
+       <li><a class="active" href="{{url_for ('index')}}"><h4 >Home</h4></a></li>
+     <li><a  href="{{url_for ('info')}}"><h4>Info</h4></a></li>
+     <li><a href="{{url_for ('update')}}"><h4>Update</h4></a></li>
+	 <li><a href="{{url_for ('details')}}"><h4>Details</h4></a></li>
+ </ul>
+ </div>
+</nav>
+<!--nav bar contents-->
+<br><br><br>
+<!--slider start-->
+<div class="panel panel-default" >
+
+
+  <div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="https://quotefancy.com/media/wallpaper/3840x2160/2497198-Will-i-am-Quote-Waste-is-only-waste-if-we-waste-it.jpg" style="width:100%; height: 400px;">
+  </div>
+  <div class="mySlides fade">
+    <img src="https://www.bokashi.com.au/site/bokashi/images/RRRC.jpg" style="width:100% ; height: 400px;">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://www.unh.edu/unhtales/wp-content/uploads/2016/01/Reduce-Reuse-Recycle.jpg" style="width:100%; height: 400px;">
+  </div>
+  <div class="mySlides fade">
+    <img src="https://beecodaily.com/wp-content/uploads/2020/05/Blue-Dynamic-Fitness-Youtube-Thumbnail-1024x576.png" style="width:100%; height: 400px;">
+  </div>
+  <div class="mySlides fade">
+    <img src="https://iamprincesssalvia.files.wordpress.com/2018/05/20180509_024312900_ios.jpg?w=1400" style="width:100%; height: 400px;">
+  </div>
+  <br>
+</div>
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+
+  <script>
+  var slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
+  </script>
+<!--slider end-->
+<!-- body-->
+    <div class="panel-body" >
+<div class="qutoes">&quot;Often when you think you are at the end of something, you are at the beginning of something else.&quot;
+<br><b>&minus;Fred Rogers, Television Personality</b></div>
+</div>
+<div>
+<h1 class="heading">What is GIGO?</h1>
+<p class="about">
+  We are people, who usually  make domestic wastage in our day today life. Most of the people do not have  the opportunity<br> or chance to do recycling the wastes as the subject is irrelevant to them. So people get decomposable wastes( food wastage, vegetable wastages etc) <br>and non decomposable wastes (like plastic and polythenes) accumulated  with them.The respective Municipality is the potential authority<br>  to remove the wastes which is mandatory to them.
+
+
+</p>
+</div>
+<div class="panel-body" style="background-color: 	 #e6fff7">
+<div class="heading-body">WHAT MORE CAN I DO ?</div>
+<div class="col-sm-3 feature">
+<h1 class="heading-sub"><img src="https://plasticcycle.lk/wp-content/uploads/2014/09/hp4-icon-3.png" width="30" height="30"><b>Refuse</b></h1>
+  <p class="content">Refuse to be a part of the problem, say ‘No thanks’ to plastic. Choose to refuse one-use items like plastic straws and shopping bags.</p>
+
+</div>
+<!--refuse-->
+<div class="col-sm-3 feature">
+<h1 class="heading-sub"><img src="https://plasticcycle.lk/wp-content/uploads/2014/09/hp4-icon-1.png" width="30" height="30"><b>Reuse</b></h1>
+  <p class="content">Reuse your old plastics instead of buying new ones. Old yoghurt cups and ice cream tubs make great flower pots.</p>
+
+</div><!--reuse-->
+<div class="col-sm-3 feature">
+<h1 class="heading-sub"><img src="https://plasticcycle.lk/wp-content/uploads/2014/09/service-icon-3.png" width="30" height="30"><b>Recycle</b></h1>
+  <p class="content">Recycle and dispose of plastic responsibly. Use recycle bins and encourage those you know to do so too!</p>
+
+</div>
+<div class="col-sm-3 feature">
+<h1 class="heading-sub"><img src="https://plasticcycle.lk/wp-content/uploads/2014/09/hp4-icon-2.png" width="30" height="30"><b>Reduce</b></h1>
+  <p class="content">Reduce your plastic waste by making greener decisions. Ask yourself “Does it really need a bag?”a kilo of onions might, but one apple wouldn’t.</p>
+
+</div><!--reduce-->
+</div>
+
+
+</div>
+<br><br><br>
+
+    <nav class="navbar navbar-default" style="background-color:#262626;">
+      <div class="col-sm-4 feature" style="color:  #595959;">
+        <center><h3  >Head Office</h3>
+        <p>Urban Council,<br>Park road,<br>Vavuniya,<br>
+          Sri Lanka.
+        </p></center>
+       </div>
+       <div class="col-sm-4 feature" style="color:  #595959">
+         <center><h3>E-Mail</h3>
+         <a href="#"><p>urbancouncilvav@gmail.com</p></a>
+         <div class="footer-copyright text-center py-3">© 2019 Copyright:
+             <a href="#">GIGO.com</a></div>
+         </center>
+</div>
+        <div class="col-sm-4 feature" style="color:  #595959;">
+              <center><h3>Office</h3>
+              <p>077-3736353<br>
+                024-2222878
+              </p></center>
+
+         </div>
+    </nav>
+
+  </body>
+</html>

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}Add Lorry{% endblock %}
+{% block content %}
+
+
+
+
+
+
+<!--Add form-->
+<div class="container add_lorry login_shadow">
+  <h2 style="text-align:center;color:#737373">Register</h2>
+<form method="POST">
+  <div class="form-group">
+    <label for="lorry_id" class="text-form"  >Lorry Id</label>
+
+      <input type="text" name="lorry_id" class="form-control" id="lorry_id" placeholder="Eg:-ABC-0xxx">
+
+  </div>
+  <div class="form-group">
+    <label for="d_name" class="text-form">Driver Name</label>
+
+      <input type="text" name="driver_name" class="form-control" id="d_name" placeholder="Eg:-Jhon">
+
+  </div>
+  <div class="form-group">
+      <label for="d_Id" class="text-form">Driver Id</label>
+      <input type="text" name ="driver_id" class="form-control" id="d_ID" placeholder="Eg:-01D">
+  </div>
+  
+  <div class="form-group row " style="padding:10px;">
+      <button type="submit" class="btn btn-primary add-bttn">ADD</button>
+  </div>
+</form>
+</div>
+
+
+
+
+{% endblock %}

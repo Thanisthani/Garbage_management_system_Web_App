@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='Stylesheet.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Log in</title>
+  </head>
+  <body class="sign_background">
+    <br><br>
+    <div class="container login_shadow">
+      <div class="row ">
+        <div class="col-sm-6 p-1">
+
+          <img  class="gigo_icon"  src="https://cdn-images.threadless.com/threadless-media/artist_shops/shops/gigo/profile/logo-1472654245-d8f491595611e6df2497ad03492ca71a.png?v=3&d=eyJvbmx5X21ldGEiOiBmYWxzZSwgImZvcmNlIjogZmFsc2UsICJvcHMiOiBbWyJyZXNpemUiLCBbMzUwXSwge31dXX0=">
+          <br><br><br><br>
+          <div class="welcome_align">
+          <p class="heading_log_welcome">Welcome to the GIGO website</p>
+          </div>
+          <div class="qutoe">&#34;When you put the whole picture together, Recycling is the right thing to do.&#34;</div>
+
+        </div>
+        <div class="col-sm-6  column_login_box " >
+          <br><br><br><br>
+          <h2 class="heading_log">Log In</h2>
+          <br>
+          <form class="px-4 py-3" method="post">
+
+<div class="form-group">
+  <label for="username">Username</label>
+  <input type="text" class="form-control border_form"  id="username" name="username">
+</div>
+
+<div class="form-group">
+  <label for="password">Password</label>
+  <input type="password" class="form-control border_form" id="password" name="password">
+</div>
+<button type="submit" class="btn btn_login" >Log In</button>
+</form>
+          <br><br><br>
+  {% with messages =get_flashed_messages() %}
+        {% if messages %}
+          <div class="alert alert-warning" role="alert">
+                {{messages}}
+            </div>
+        {% endif %}
+        {% endwith %}
+
+
+          </div>
+      </div>
+</div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

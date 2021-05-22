@@ -1,0 +1,380 @@
+
+.fixed-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 60px;
+  background-color:#66ffc2;
+}
+.heading{
+  color: #a6a6a6;
+  font-size:300%;
+  font-family:"Times New Roman", Times, serif;
+  text-align:center;
+}
+.content{
+  color:#00cc44;
+  font-size: 150%;
+  font-family:"Bradley Hand ITC", Times, serif;
+
+}
+.iconGigo{
+  color:green;
+   font-size:150%;
+   padding: 0px;
+   height:8px;
+}
+.about{
+  color: #a6a6a6;
+  text-align:center;
+  font-size: 120%;
+}
+.qutoes{
+  color: 	 #00cc44;
+  font-size: 150%;
+  text-align:center;
+}
+.heading-body{
+  color: #66cc00;
+  font-size:300%;
+  font-family:"Times New Roman", Times, serif;
+  text-align:left;
+}
+.heading-sub{
+  color: black;
+  font-size:250%;
+  font-family:"Comic Sans MS", Times, serif;
+  text-align:left;
+}
+.division-4r{
+  background-color:inherit;
+  border: 30px;
+}
+
+ * {
+  box-sizing: border-box;
+}
+.mySlides {display: none;
+}
+img {vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+/*Log in*/
+.sign_background{
+     background-image: url("https://thumbs.dreamstime.com/b/light-green-waves-blurred-background-soft-touch-simple-sweet-wallpaper-light-green-waves-blurred-background-soft-touch-simple-176238268.jpg");
+     background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+   background-attachment: fixed;
+}
+.column_login_box{
+ background-color: white;
+ height: 600px;
+ width: 450px;
+
+  }
+  .login_shadow {
+    border: 0.1px ;
+
+  width:900px;
+  float:inherit;
+  height: 600px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+
+}
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+.heading_log{
+
+  text-align:center;
+}
+.border_form{
+   border-color: #4dffa6;
+   border-style: solid;
+ border-width: 2px;
+}
+.btn_login{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+   background-image: linear-gradient(to left,  #00e6b8 , #99ffcc);
+   padding: 5px;
+   width:150px;
+   color:white;
+   font-size:130%;
+}
+.login_center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.gigo_icon{
+  height: 100px;
+  width:100px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.heading_log_welcome{
+  color:  white;
+  font-size:150%;
+  font-family: Courier New;
+  text-align:center;
+  font-weight:lighter;
+
+
+}
+.welcome_align{
+  position: absolute;
+  top:38%;
+    left: 10%;
+
+}
+.qutoe{
+  position: absolute;
+  top:60%;
+    left: 10%;
+    color:  #006622;
+    font-size:150%;
+    font-family: Courier New;
+    text-align:center;
+    font-weight:lighter;
+}
+
+
+
+/*database*/
+
+
+
+.footer_placement{
+  position:absolute;
+  bottom: 0px;
+  width: 100%;
+  top:600px;
+}
+.search_info{
+  position:absolute;
+   top:80px;
+   left:720px;
+   right:0px;
+}
+.border_search{
+
+   border-color: #4dffa6;
+   border-style: solid;
+ border-width: 2px;
+ width:30%;
+ height: 40px;
+ padding: 10px;
+
+}
+
+.scroll {
+  position:fixed;
+  top:60px;
+  left:0px;
+  right:0px;
+  background-color: #b3ffec;
+  height:680px;
+  width: 250px;
+  overflow-y: scroll;
+  padding: 0px;
+  color: #008060;
+}
+.place_table{
+  position:relative;
+  top:150px;
+  width: 100%;
+  right:80px;
+
+}
+/*Table*/
+table, th, td {
+  width:10px;
+border:2px;
+border-collapse: collapse;
+
+}
+table{
+
+  background-color:  #ccfff2;
+}
+th{
+background-color:#00cc99;
+padding:15px;
+height:60px;
+font-size:130%;
+
+}
+td{
+  font-size:110%;
+  height:45px;
+}
+/*update*/
+
+.search_update{
+  position:absolute;
+   top:80px;
+   left:900px
+
+}
+.update_table{
+  position:absolute;
+  top:160px;
+  width: 80%;
+  left: 200px;
+
+}
+.edit-btn{
+  background-color: #e68a00;
+	border: 0.5px #a6e0b7;
+	color: white;
+	padding: 10px 30px;
+	cursor: pointer;
+	float: left;
+	border-radius: 6px;
+
+}
+.edit-btn:hover{
+  background-color: #ff9900;
+}
+.delete-btn{
+  background-color:	 #b30000;
+	border: 0.5px #a6e0b7;
+	color: white;
+	padding: 10px 30px;
+	cursor: pointer;
+	float: left;
+	border-radius: 6px;
+}
+.delete-btn:hover{
+  background-color: #e60000;
+}
+.search-btn{
+
+   background-color:#cc6600;
+  border: 0.5px #a6e0b7;
+  color: white;
+  padding: 10px 25px;
+  font-size: 120%;
+  cursor: pointer;
+  background-image: linear-gradient(to left,  #00e6b8 , #99ffcc);
+  margin-left:20px;
+}
+.search-btn:hover{
+  background-image: linear-gradient(to left,  #99ffcc ,    #00e6b8 );
+}
+
+
+.add-btn{
+  position:absolute;
+   top:80px;
+   left:300px;
+   background-color:#cc6600;
+  border: 0.5px #a6e0b7;
+  color: white;
+  padding: 10px 30px;
+  cursor: pointer;
+  float: left;
+  border-radius: 6px;
+}
+.add-btn:hover{
+  background-color:#e67300;
+}
+/*Add cust*/
+.add-place{
+  border-radius: 5px;
+  border: 0.5px;
+  background-color: white;
+  position:absolute;
+   top:100px;
+   left:550px;
+   Width: 400px;
+   height: 470px;
+   padding: 20px;
+}
+.add-bttn{
+  top:300px;
+  left:600px;
+  padding: 10px 30px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 6px;
+}
+.text-form{
+  font-size: 130%;
+  font-family:   font-family:"Times New Roman";
+  color: #8c8c8c;
+}
+/*Add lorry*/
+.add_lorry{
+  border-radius: 5px;
+  border: 0.5px;
+  background-color: white;
+  position:absolute;
+   top:100px;
+   left:550px;
+   Width: 400px;
+   height: 400px;
+   padding: 20px;
+}

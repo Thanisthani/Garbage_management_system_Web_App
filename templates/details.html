@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}Details{% endblock %}
+{% block details%}active {% endblock %}
+{% block content %}
+
+
+
+
+
+
+
+
+<!--Search bar-->
+
+
+<a href="{{url_for ('addlorry')}}" class="add-btn">Add Lorry</a>
+
+
+
+
+
+<!--Table-->
+
+
+<div class="update_table">
+<table class="table table-hover  table-bordered">
+  <thead>
+    <tr>
+
+      <th scope="col">Lorry Id</th>
+      <th scope="col">Driver ID</th>
+      <th scope="col">Driver Name</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for data in datas %}
+    <tr>
+
+      <td>{{data.lorry_id}}</td>
+      <td>{{data.Driver_id}}</td>
+      <td>{{data.Driver_name}}</td>
+      <td><a class="edit-btn" href="{{url_for ('editlorry', lorry_id=data.lorry_id)}}">Edit </a></td>
+      <td> <a class="delete-btn" onclick="return confirm('Are you sure to delete?');" href="{{url_for ('deletelorry', l_id=data.lorry_id)}}">Delete</a></td>
+    </tr>
+   {% endfor %}
+  </tbody>
+</table>
+</div>
+
+{% endblock %}

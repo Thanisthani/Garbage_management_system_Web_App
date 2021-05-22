@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title%}{% endblock %}</title>
+    <meta charset="utf-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <!-My css-->
+     <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='Stylesheet.css')}}">
+      <style>
+           html, body {
+         height: 120%;
+         margin: 0;
+       }
+       .wrapper {
+         min-height: 100%;
+
+         /* Equal to height of footer */
+         /* But also accounting for potential margin-bottom of last child */
+         margin-bottom: -50px;
+       }
+       .footer,
+       .push {
+         height: 50px;
+       }
+       .topnav {
+  overflow: hidden;
+
+}
+
+
+
+.topnav a:hover {
+padding :10px;
+  border-bottom: 3px solid red;
+}
+
+.topnav a.active {
+padding :10px;
+background-color: #66ffc2;
+  border-bottom: 3px solid red;
+}
+      </style>
+
+  </head>
+
+
+  <body style="background-color: #e6e6e6">
+<div class="wrapper">
+
+<!--nav bar contents-->
+    <nav   class="navbar navbar-default fixed-top fixed-nav-bar">
+ <div class="container-fluid  nopadding topnav">
+   <ul class="nav navbar-nav ">
+     <li class=" p-0" ><a style="background-color: #ffff33;" href="{{url_for ('index')}}"><h4 class="iconGigo"><b>GIGO</b>  </h4></a></li>
+       <li><a href="{{url_for ('index')}}"><h4>Home</h4></a></li>
+    <li><a class="{% block info%} {% endblock %}" href="{{url_for ('info')}}"><h4>Info</h4></a></li>
+     <li><a class="{% block update%} {% endblock %} " href="{{url_for ('update')}}"><h4>Update</h4></a></li>
+	 <li><a class="{% block details%} {% endblock %} " href="{{url_for ('details')}}"><h4>Details</h4></a></li>
+
+ </ul>
+ </div>
+</nav>
+
+  {% block content%}
+{% endblock %}
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="push"></div>
+</div> <!--Wrapper-->
+
+  <!--footer-->
+<footer class="footer">
+    <nav class="navbar navbar-default" style="background-color:#262626;">
+      <div class="col-sm-4 feature" style="color:  #595959;">
+        <center><h3  >Head Office</h3>
+        <p>Urban Council,<br>Park road,<br>Vavuniya,<br>
+          Sri Lanka.
+        </p></center>
+       </div>
+       <div class="col-sm-4 feature" style="color:  #595959;">
+         <center><h3>E-Mail</h3>
+         <a href="#"><p>urbancouncilvav@gmail.com</p></a>
+         <div class="footer-copyright text-center py-3">© 2019 Copyright:
+             <a href="#">GIGO.com</a></div></center>
+</div>
+        <div class="col-sm-4 feature" style="color:  #595959;">
+              <center><h3>Office</h3>
+              <p>077-3736353<br>
+                024-2222878
+              </p></center>
+
+         </div>
+    </nav>
+  </footer>
+  {% block footer%}{% endblock %}
+  </body>
+</html>

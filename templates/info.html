@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% block title %}Info{% endblock %}
+{% block info%}active {% endblock %}
+{% block content %}
+
+
+
+<div class="row">
+
+
+<!--Scroll bar-->
+<div class="col-sm-3">
+<div class="scroll ">
+<h3>Rambaikuam</h3>
+<h4>St. Josephvaz lane-01S</h4>
+<h4>St. Mothertheresa lane-02S</h4>
+  <h4>Horowapothana Road-03S</h4>
+  <h4>Rani mill Road-03S</h4>
+<h3>Vairavapuliyankulam</h3>
+<h4>Station Road-05S</h4>
+<h4>Mannar Road-06S</h4>
+<h4>Vairavar Kovil Road-07S</h4>
+  <h3>Vavuniya Town</h3>
+  <h4>Mill Road-08S</h4>
+  <h4>Kanthasamy kovil Road-09S</h4>
+  <h4>Kandy Road-10S</h4>
+  <h4>Jaffna Road-11S</h4>
+  <h4>Park Road-12S</h4>
+  <h4>Bazar street-13S</h4>
+  <h3>Thonikal</h3>
+  <h4>Goodshed-14S</h4>
+  <h4>Station Road-15S</h4>
+  <h4>Inner circular Road-16S</h4>
+  <h4>Outer circular Road-17S</h4>
+  <h3>Kurmankaadu</h3>
+  <h4>Mannar Road-18S</h4>
+  <h4>Kurmankaadu junction-19S</h4>
+  <h4>Station Road-20S</h4>
+  <h4>1st lane-21S</h4>
+  <h4>2nd lane-22S</h4>
+</div>
+</div>
+
+
+
+
+<!--Search bar-->
+<div class="col-sm-9">
+<div class="container search_info">
+<form class="form-inline "   action="{{ url_for('showinfo')}}" method="POST"  >
+     <input class="form-control mr-4 border_search" type="search" placeholder="Enter Street Id (Eg:-01s)" aria-label="Search" name="street_id">
+     <button class="search-btn" type="submit" >Search</button>
+   </form>
+</div>
+
+
+
+
+<!--Table-->
+
+
+<div class=" place_table">
+<table class="table table-hover  table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Customer Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">House No</th>
+      <th scope="col">Street ID</th>
+      <th scope="col">Compost(Kg)</th>
+      <th scope="col">Ecobrick</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for data in datas %}
+    <tr>
+      <td>{{data.cus_id}}</td>
+      <td>{{data.Name}}</td>
+      <td>{{data.House_no}}</td>
+      <td>{{data.street_id}}</td>
+      <td>{{data.capablecompost}}</td>
+      <td>{{data.ecobrick}}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+
+{% block footer%}
+</div>
+</div>
+{% endblock%}
+
+
+{% endblock %}
